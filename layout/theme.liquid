@@ -6,6 +6,6 @@
     {% render 'header' %}
     {{ content_for_layout }}
 
-    {{ 'script.js' }}
+    {{ 'script.js' | asset_url | src }}
 </body>
 </html>

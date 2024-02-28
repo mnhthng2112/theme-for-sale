@@ -2,12 +2,13 @@
     <head>
         {{ content_for_header }}
         {{ '//cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css' | stylesheet_tag }}
-        {{ '//cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js' | script_tag }}
+        
         {{ 'style.css' | asset_url | stylesheet_tag }}
     </head>
     <body>
         {% render 'header' %}
         {{ content_for_layout }}
+        {{ '//cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js' | script_tag }}
         {{ 'script.js' | asset_url | script_tag }}
     </body>
 </html>

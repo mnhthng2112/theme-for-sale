@@ -7,9 +7,7 @@
 </head>
 <body>
     {% render 'header' %}
-
     {{ content_for_layout }}
-
     {{ 'script.js' | asset_url | script_tag }}
 </body>
 </html>

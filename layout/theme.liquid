@@ -8,7 +8,7 @@
         {% render 'header' %}
         {{ content_for_layout }}
         {{ '//cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js' | script_tag }}
-        {{ 'script.js' | asset_url | script_tag }}
-        <script src="{{  }}"></script>
+        {% comment %} {{ 'script.js' | asset_url | script_tag }} {% endcomment %}
+        <script src="{{ 'script.js' | asset_url }}"></script>
     </body>
 </html>

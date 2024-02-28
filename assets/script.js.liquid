@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const menuItemMega = document.querySelectorAll('.gen-menu .gen-menu__item--mega');
 const header = document.querySelector('.gen-header');
 
@@ -22,4 +23,30 @@ const swiper_1 = new Swiper('.gen-swiper-banner', {
     },
 
     effect: 'fade'
+=======
+const menuItemMega = document.querySelectorAll('.gen-menu .gen-menu__item--mega');
+const header = document.querySelector('.gen-header');
+
+for (let i = 0; i < menuItemMega.length; i++) {
+    menuItemMega[i].addEventListener('mouseover', () => {
+        header.classList.add("gen-mega-active");
+    });
+
+    menuItemMega[i].addEventListener('mouseout', () => {
+        header.classList.remove("gen-mega-active");
+    });
+}
+
+const swiper_1 = new Swiper('.gen-swiper-banner', {
+    loop: true,
+    autoplay: true,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        bulletClass: "gen-dot",
+        bulletActiveClass: "gen-dot--active"
+    },
+
+    effect: 'fade'
+>>>>>>> 5aff26444f3d3fd38ae5dfcc6166e95300796b93
 });

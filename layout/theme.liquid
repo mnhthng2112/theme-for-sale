@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <html>
 <head>
     {{ content_for_header }}
@@ -10,4 +11,18 @@
     {{ content_for_layout }}
     {{ 'script.js' | asset_url | script_tag }}
 </body>
+=======
+<html>
+<head>
+    {{ content_for_header }}
+    {{ '//cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css' | stylesheet_tag | script_tag }}
+    {{ '//cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js' | script_tag }}
+    {{ 'style.css' | asset_url | stylesheet_tag }}
+</head>
+<body>
+    {% render 'header' %}
+    {{ content_for_layout }}
+    {{ 'script.js' | asset_url | script_tag }}
+</body>
+>>>>>>> 5aff26444f3d3fd38ae5dfcc6166e95300796b93
 </html>

@@ -2,19 +2,12 @@
     <head>
         {{ content_for_header }}
         {{ 'style.css' | asset_url | stylesheet_tag }}
-        {% comment %} {{ '//cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css' | stylesheet_tag }} {% endcomment %}
-        <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        {{ '//cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css' | stylesheet_tag }}
     </head>
     <body>
         {% render 'header' %}
         {{ content_for_layout }}
-        {% comment %} {{ '//cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js' | script_tag }} {% endcomment %}
-        {% comment %} {{ 'script.js' | asset_url | script_tag }} {% endcomment %}
-
-        <script src="{{ 'script.js' | asset_url }}"></script>
+        {{ '//cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js' | script_tag }}
+        {{ 'script.js' | asset_url | script_tag }}
     </body>
 </html>

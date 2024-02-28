@@ -28,6 +28,9 @@
                 <div class="gen-mega-menu">
                 <div class="gen-mega-menu__container gen-container--fluid">
                     <div class="gen-mega-menu__inner gen:w-full">
+                    {% for link in linklists.main-menu.links -%}
+                    {{ link.title | link_to: link.url }}
+                    {%- endfor %}
                     <ul
                         class="gen-sub-menu gen-sub-menu--level-1 gen-sub-menu--grid gen:grid-cols-5 gen:gap-30">
                         <li

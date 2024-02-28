@@ -10,4 +10,18 @@
         {{ '//cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js' | script_tag }}
         {{ 'script.js' | asset_url | script_tag }}
     </body>
+    <script>
+    const swiper_1 = new Swiper('.gen-swiper-banner', {
+    loop: true,
+    autoplay: true,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        bulletClass: "gen-dot",
+        bulletActiveClass: "gen-dot--active"
+    },
+
+    effect: 'fade'
+});
+    </script>
 </html>

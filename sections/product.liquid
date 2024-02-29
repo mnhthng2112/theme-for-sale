@@ -180,9 +180,9 @@
   {%- endfor -%}
 
   <div>
-    <p><a href="{{ collection.url }}?sort_by={{ collection.sort_by }}">Clear all</a></p>
+    <p><a href="{{ index.url }}?sort_by={{ index.sort_by }}">Clear all</a></p>
 
-    {%- for filter in collection.filters -%}
+    {%- for filter in index.filters -%}
       {%- if filter.type == "price_range" -%}
         {%- if filter.min_value.value != nil or filter.max_value.value != nil -%}
           <p>

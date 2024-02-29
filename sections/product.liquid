@@ -33,9 +33,11 @@
     <div class="gen-section__body">
     <div class="gen:grid gen:grid-cols-4 gen:gap-x-30 gen:gap-y-60">
         {% for product in collections['clothes'].products %}
+
         {{- product.title | link_to: product.url }}
+
         {% endfor %}
-        {% comment %} <div class="gen-product-card gen-observed gen-fadeInUp" data-delay=100>
+        <div class="gen-product-card gen-observed gen-fadeInUp" data-delay=100>
             <div class="gen-product-card__media">
                 <a href="#" class="gen-product-card__link">
                 <div class="gen-product-card__main-img">
@@ -118,7 +120,7 @@
 
                 </div>
             </div>
-        </div>  {% endcomment %}
+        </div> 
         <div class="gen-product-card gen-observed gen-fadeInUp" data-delay=200>
         <div class="gen-product-card__media">
             <a href="#" class="gen-product-card__link">

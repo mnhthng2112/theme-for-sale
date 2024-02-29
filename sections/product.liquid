@@ -28,14 +28,25 @@
                 <div class="gen-dropdown__menu-item">Sunglasses</div>
             </div>
         </div> 
-        <select id="sort-by">
+        {% comment %} <select id="sort-by">
             {% assign sort_by = collection.sort_by | default: collection.default_sort_by %}
             {% for option in collection.sort_options %}
                 <option value="{{ option.value }}" {% if option.value == sort_by %}selected="selected"{% endif %}>
                 {{ option.name }}
                 </option>
             {% endfor %}
-        </select>
+        </select> {% endcomment %}
+        {% if collection.all_tags.size > 0 %}
+        <ul class="tag-filters">
+            {% for tag in collection.all_tags %}
+            {% if current_tags contains tag %}
+                <li class="tag-filters__item active">{{ tag | link_to_remove_tag: tag }}</li>
+            {% else %}
+                <li class="tag-filters__item">{{ tag | link_to_add_tag: tag }}</li>
+            {% endif %}
+            {% endfor %}
+        </ul>
+        {% endif %}
         <button class="gen-btn gen-btn--dark gen-rounded--full">Search</button>
     </div>
     </div>

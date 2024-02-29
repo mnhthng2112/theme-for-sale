@@ -1,9 +1,9 @@
 {% section 'banner' %}
 
 <select id="sort-by">
-  {% assign sort_by = collections['clothes'].sort_by | default: collections['clothes'].default_sort_by %}
+  {% assign sort_by = collection.sort_by | default: collection.default_sort_by %}
 
-  {% for option in collections['clothes'].sort_options %}
+  {% for option in collection.sort_options %}
     <option value="{{ option.value }}" {% if option.value == sort_by %}selected="selected"{% endif %}>
       {{ option.name }}
     </option>

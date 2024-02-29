@@ -29,12 +29,12 @@
             </div>
         </div> 
         {% comment %} filter {% endcomment %}
-{% for product in collection.products %}
-  {% if product.tags contains 'clothes' %}
-    <h2>{{ product.title }}</h2>
-    <!-- Additional product information can be displayed here -->
-  {% endif %}
-{% endfor %}
+        {% for product in collection.products %}
+        {% if product.tags contains 'clothes' %}
+            <h2>{{ product.title }}</h2>
+            <!-- Additional product information can be displayed here -->
+        {% endif %}
+        {% endfor %}
 
         <button class="gen-btn gen-btn--dark gen-rounded--full">Search</button>
     </div>

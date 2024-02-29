@@ -2,4 +2,6 @@
 <div> {{ product.price | money }} </div>
 <div> {{ product.description }} </div>
 
-{}
+{% form 'product', product: product %}
+    <select name="" id=""></select>
+{% endform %}

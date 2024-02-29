@@ -1,5 +1,15 @@
 {% section 'banner' %}
 
+<select id="sort-by">
+  {% assign sort_by = collection.sort_by | default: collection.default_sort_by %}
+
+  {% for option in collection.sort_options %}
+    <option value="{{ option.value }}" {% if option.value == sort_by %}selected="selected"{% endif %}>
+      {{ option.name }}
+    </option>
+  {% endfor %}
+</select>
+
 <div class="gen-container--fluid">
     <div class="gen:grid gen:grid-cols-4 gen:gap-x-30 gen:gap-y-60">
     {% for product in collections['clothes'].products %}

@@ -1,5 +1,5 @@
 {
-  "wrapper": "div#div_id.gen-header.gen-header--overlap gen-header--white[attribute-one=value]",
+  "wrapper": "div#div_id.gen-header.gen-header--overlap.gen-header--white",
   "sections": {
     "main": {
       "type": "header"

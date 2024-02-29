@@ -1,9 +1,5 @@
 {% section 'banner' %}
 
-{% for product in collection.products %}
-    {% render 'product-item', product: product %}
-{% endfor %}
-
 {% for product in collections['clothes'].products %}
     {% render 'product-item', product: product %}
 {% endfor %}

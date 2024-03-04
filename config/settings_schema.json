@@ -1,12 +1,12 @@
 [
   {
-    "name": "Colors",
+    "name": "menu",
     "settings": [
       {
-        "type": "color",
-        "id": "bg",
-        "label": "Background color",
-        "default": "#000000"
+        "type": "checkbox",
+        "id": "mega-menu",
+        "label": "show mega menu",
+        "default": true
       }
     ]
   }
